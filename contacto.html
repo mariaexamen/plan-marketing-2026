@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Contacto — BASSTO España</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<div class="bg"><div class="blob c1"></div><div class="blob c2"></div><div class="blob c3"></div><div class="blob c4"></div></div>
+
+<nav class="pill">
+  <a class="logo" href="tienda.html">BASSTO</a>
+  <a class="t" href="tienda.html">Home</a>
+  <a class="t" href="productos.html">Productos</a>
+  <a class="t" href="empresa.html">Sobre la empresa</a>
+  <a class="t on" href="contacto.html">Contacto</a>
+</nav>
+
+<main>
+
+  <header class="rv">
+    <span class="kicker">Contacto</span>
+    <h1 class="big">Hablemos 👋</h1>
+    <p class="lead">Dudas, pedidos, distribución o regalo corporativo — respondemos en menos de 24 h.</p>
+    <div class="stripe"><i></i><i></i><i></i><i></i><i></i></div>
+  </header>
+
+  <section class="rv">
+    <div class="split">
+      <!-- FORMULARIO -->
+      <div class="glass panel">
+        <h2 class="sec">Escríbenos</h2>
+        <form class="glassform" onsubmit="event.preventDefault(); this.innerHTML='<p class=lead>✅ ¡Gracias! Te responderemos muy pronto.</p>';">
+          <input type="text" placeholder="Nombre" required>
+          <input type="email" placeholder="Email" required>
+          <select>
+            <option>Quiero hacer un pedido</option>
+            <option>Distribución / punto de venta</option>
+            <option>Regalo corporativo / personalización</option>
+            <option>Prensa y colaboraciones</option>
+            <option>Otra cosa</option>
+          </select>
+          <textarea rows="5" placeholder="Cuéntanos…" required></textarea>
+          <button class="btn" type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+
+      <!-- CANALES -->
+      <div>
+        <div class="feat glass" style="margin-bottom:16px;"><div class="ic">💬</div><b>WhatsApp</b><span>Atención directa de lunes a viernes, 9:00–18:00</span></div>
+        <div class="feat glass" style="margin-bottom:16px;"><div class="ic">📦</div><b>Distribución España</b><span>¿Tienes una tienda multimarca? Busca tu propuesta de sell-in: distribucion@bassto.es</span></div>
+        <div class="feat glass" style="margin-bottom:16px;"><div class="ic">🏢</div><b>Empresas</b><span>Calcetines personalizados con tu marca desde 100 unidades: corporate@bassto.es</span></div>
+        <div class="feat glass" style="margin-bottom:16px;"><div class="ic">📍</div><b>Dónde estamos</b><span>Bogotá (casa madre) · Madrid (hub logístico, próximamente)</span></div>
+        <div class="feat glass"><div class="ic">📱</div><b>Redes</b><span>@bassto — Instagram · TikTok · LinkedIn</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="rv">
+    <h2 class="sec">Preguntas <span class="grad">frecuentes</span></h2>
+    <div class="feats">
+      <div class="feat glass"><div class="ic">🚚</div><b>¿Cuánto tarda el envío?</b><span>24–48 h en Península y Baleares. Gratis a partir de 30 €.</span></div>
+      <div class="feat glass"><div class="ic">📏</div><b>¿Qué talla pido?</b><span>Talla única 40–46: el tejido elástico se adapta al pie.</span></div>
+      <div class="feat glass"><div class="ic">↩️</div><b>¿Y si no me gustan?</b><span>30 días de devolución sin preguntas. Aunque te van a gustar.</span></div>
+      <div class="feat glass"><div class="ic">🎁</div><b>¿Hacéis packs personalizados?</b><span>Sí — packs regalo y personalización corporativa desde 100 uds.</span></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="fstripe"><i></i><i></i><i></i><i></i><i></i></div>
+  <p>BASSTO España · «Para verse y sentirse mejor»<br>
+  Mockup académico — <a href="index.html">Plan de Marketing 2026</a> · María Moreno Ventura · Marca original: bassto.com</p>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }
+  }), {threshold:.1});
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

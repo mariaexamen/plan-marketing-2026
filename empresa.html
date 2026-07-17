@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Sobre la empresa — BASSTO España</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<div class="bg"><div class="blob c1"></div><div class="blob c2"></div><div class="blob c3"></div><div class="blob c4"></div></div>
+
+<nav class="pill">
+  <a class="logo" href="tienda.html">BASSTO</a>
+  <a class="t" href="tienda.html">Home</a>
+  <a class="t" href="productos.html">Productos</a>
+  <a class="t on" href="empresa.html">Sobre la empresa</a>
+  <a class="t" href="contacto.html">Contacto</a>
+</nav>
+
+<main>
+
+  <header class="rv">
+    <span class="kicker">Sobre la empresa</span>
+    <h1 class="big">Para verse y<br><span class="grad">sentirse mejor</span></h1>
+    <p class="lead">Bassto nace en Bogotá con una idea sencilla: el calcetín no es el final del outfit, es el principio de la actitud.</p>
+    <div class="stripe"><i></i><i></i><i></i><i></i><i></i></div>
+  </header>
+
+  <!-- QUIÉNES SOMOS -->
+  <section class="rv">
+    <div class="glass panel split">
+      <div>
+        <h2 class="sec">Quiénes somos 🇨🇴</h2>
+        <p class="lead">Somos una marca colombiana de diseño, producción y comercialización de calcetines de algodón peinado. Combinamos creatividad, moda y funcionalidad en colecciones temáticas y ediciones especiales que celebran la identidad latina: su color, su fauna, su comida y su descaro.</p>
+        <p class="lead" style="margin-top:12px;">Diseñamos en tiradas cortas para que cada colección sea especial, producimos de forma responsable y vendemos donde está nuestra gente: online, en tiendas aliadas y en el regalo corporativo.</p>
+      </div>
+      <div class="stats">
+        <div class="stat glass"><b>Bogotá</b><span>Casa madre</span></div>
+        <div class="stat glass"><b>Madrid</b><span>Próximamente · hub España</span></div>
+        <div class="stat glass"><b>+200</b><span>diseños lanzados</span></div>
+        <div class="stat glass"><b>+50</b><span>empresas cliente</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSICIONAMIENTO -->
+  <section class="rv">
+    <h2 class="sec">Cómo nos <span class="grad">posicionamos</span></h2>
+    <p class="lead">Diseño accesible: más carácter que un básico, más cercanos que el lujo.</p>
+    <div class="feats">
+      <div class="feat glass"><div class="ic">🎨</div><b>Diseño con identidad</b><span>Cada par cuenta una historia de Colombia — no somos otro calcetín de colores</span></div>
+      <div class="feat glass"><div class="ic">💛</div><b>Accesibles</b><span>9,90 € el par: un capricho que cualquiera puede regalarse (o regalar)</span></div>
+      <div class="feat glass"><div class="ic">🌱</div><b>Responsables</b><span>Algodón peinado, tiradas cortas y producción cuidada en origen</span></div>
+      <div class="feat glass"><div class="ic">😉</div><b>Cercanos</b><span>Hablamos como somos: con humor, color y acento</span></div>
+    </div>
+  </section>
+
+  <!-- HISTORIA -->
+  <section class="rv">
+    <div class="glass panel">
+      <h2 class="sec">Nuestra historia</h2>
+      <div class="tl">
+        <div class="hit"><b>2018 — Bogotá</b><p>Nace Bassto con una primera colección de 12 diseños y una intuición: «tod@s usan medias».</p></div>
+        <div class="hit"><b>2020 — Multicanal</b><p>Tienda online propia, tiendas aliadas en Colombia y los primeros clientes corporativos.</p></div>
+        <div class="hit"><b>2023 — Regalo corporativo</b><p>La personalización para empresas se convierte en motor: Platzi, Accenture o el Museo Nacional ya regalan Bassto.</p></div>
+        <div class="hit"><b>2026 — España</b><p>Cruzamos el charco: lanzamiento del e-commerce en España con distribución multimarca en las principales ciudades.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTES -->
+  <section class="rv">
+    <h2 class="sec">Confían en <span class="grad">nosotros</span></h2>
+    <p class="lead">Empresas que ya usan Bassto como regalo corporativo en Colombia.</p>
+    <div class="logos">
+      <span>Platzi</span><span>Accenture</span><span>Museo Nacional</span><span>+50 empresas</span>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="rv">
+    <div class="glass panel" style="text-align:center;">
+      <h2 class="sec">¿Te unes al viaje? 🧦</h2>
+      <p class="lead" style="margin:0 auto;">Descubre el catálogo o escríbenos para distribución y regalo corporativo en España.</p>
+      <br>
+      <a class="btn" href="tienda.html#catalogo">Ver catálogo</a>
+      <a class="btn ghost" href="contacto.html">Contactar</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="fstripe"><i></i><i></i><i></i><i></i><i></i></div>
+  <p>BASSTO España · «Para verse y sentirse mejor»<br>
+  Mockup académico — <a href="index.html">Plan de Marketing 2026</a> · María Moreno Ventura · Marca original: bassto.com</p>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }
+  }), {threshold:.1});
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
