@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bassto España — Calcetines de diseño para hombre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#101D42; --ink:#1c2333; --muted:#5c6478; --paper:#fff; --soft:#f4f6fb; --line:#e3e8f2;
+    --coral:#FF5A5F; --amarillo:#FFB400; --teal:#00A6A6; --lila:#7D5BA6; --verde:#6BBF59;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); background:var(--paper); line-height:1.6;}
+  h1,h2,h3,.logo{font-family:'Sora',sans-serif;}
+
+  .promo{background:linear-gradient(90deg,var(--coral),var(--amarillo),var(--teal),var(--lila),var(--verde));
+    color:#fff; text-align:center; font-size:.85rem; font-weight:600; padding:8px 14px; text-shadow:0 1px 2px rgba(0,0,0,.25);}
+
+  .topbar{display:flex; align-items:center; justify-content:space-between; gap:14px;
+    padding:16px 22px; border-bottom:1px solid var(--line); position:sticky; top:0;
+    background:rgba(255,255,255,.94); backdrop-filter:blur(8px); z-index:20;}
+  .logo{font-weight:800; letter-spacing:.28em; color:var(--navy); font-size:1.15rem; text-decoration:none;}
+  .topbar .links{display:flex; gap:4px; flex-wrap:wrap;}
+  .topbar a.nl{color:var(--muted); text-decoration:none; font-size:.85rem; font-weight:600; padding:6px 10px; border-radius:8px;}
+  .topbar a.nl:hover{background:var(--soft); color:var(--navy);}
+  .cart{background:var(--navy); color:#fff; border-radius:20px; padding:7px 14px; font-size:.85rem; font-weight:600; text-decoration:none;}
+
+  .hero{background:var(--navy); color:#fff; text-align:center; padding:74px 24px 66px; position:relative; overflow:hidden;}
+  .blob{position:absolute; border-radius:50%; filter:blur(70px); opacity:.22; animation:drift 16s ease-in-out infinite alternate;}
+  .b1{width:320px;height:320px;background:var(--coral); top:-70px; left:-50px;}
+  .b2{width:280px;height:280px;background:var(--teal); bottom:-60px; right:-30px; animation-delay:-6s;}
+  @keyframes drift{from{transform:translate(0,0);} to{transform:translate(38px,-26px) scale(1.12);}}
+  .hero h1{font-size:clamp(1.9rem,5.5vw,3.2rem); font-weight:800; position:relative;}
+  .hero p{opacity:.85; margin-top:10px; position:relative;}
+  .stripe{display:flex; height:6px; width:210px; margin:22px auto 0; border-radius:3px; overflow:hidden; position:relative;}
+  .stripe i{flex:1;}
+  .stripe i:nth-child(1){background:var(--coral);} .stripe i:nth-child(2){background:var(--amarillo);}
+  .stripe i:nth-child(3){background:var(--teal);} .stripe i:nth-child(4){background:var(--lila);}
+  .stripe i:nth-child(5){background:var(--verde);}
+  .badges{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:26px; position:relative;}
+  .badge{background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25); border-radius:18px;
+    padding:6px 14px; font-size:.8rem; font-weight:600;}
+
+  main{max-width:1080px; margin:0 auto; padding:40px 22px 80px;}
+  .filters{display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:30px;}
+  .chip{border:1px solid var(--line); background:var(--paper); color:var(--navy); font-size:.83rem;
+    font-weight:600; padding:7px 16px; border-radius:20px; cursor:pointer; transition:all .2s;}
+  .chip.on,.chip:hover{background:var(--navy); color:#fff; border-color:var(--navy);}
+
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:20px;}
+  .prod{border:1px solid var(--line); border-radius:16px; overflow:hidden; background:var(--paper);
+    transition:transform .25s ease, box-shadow .25s ease;}
+  .prod:hover{transform:translateY(-6px); box-shadow:0 16px 34px rgba(16,29,66,.12);}
+  .ph{height:170px; display:flex; align-items:center; justify-content:center; font-size:4.2rem; position:relative;}
+  .tag{position:absolute; top:10px; left:10px; background:var(--navy); color:#fff; font-size:.7rem;
+    font-weight:700; padding:3px 10px; border-radius:10px; letter-spacing:.03em;}
+  .tag.new{background:var(--coral);} .tag.top{background:var(--amarillo); color:var(--navy);} .tag.eco{background:var(--verde);}
+  .info{padding:14px 16px 16px;}
+  .info b{font-family:'Sora',sans-serif; color:var(--navy); font-size:.95rem;}
+  .info span{display:block; color:var(--muted); font-size:.8rem; margin:2px 0 10px;}
+  .buy{display:flex; align-items:center; justify-content:space-between;}
+  .price{font-family:'Sora',sans-serif; font-weight:800; color:var(--navy);}
+  .price s{color:var(--muted); font-weight:400; font-size:.8rem; margin-right:6px;}
+  .add{background:var(--soft); border:1px solid var(--line); color:var(--navy); font-weight:700;
+    border-radius:10px; padding:6px 12px; font-size:.8rem; cursor:pointer; transition:all .2s;}
+  .add:hover{background:var(--teal); border-color:var(--teal); color:#fff;}
+
+  .valueprops{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:16px; margin:56px 0 0;}
+  .vp{background:var(--soft); border-radius:14px; padding:20px; text-align:center;}
+  .vp .ic{font-size:1.8rem;}
+  .vp b{display:block; font-family:'Sora',sans-serif; color:var(--navy); font-size:.92rem; margin-top:8px;}
+  .vp span{font-size:.82rem; color:var(--muted);}
+
+  .planlink{margin:56px auto 0; max-width:640px; background:var(--navy); color:#fff; border-radius:16px;
+    padding:26px 28px; text-align:center;}
+  .planlink a{display:inline-block; margin-top:12px; background:#fff; color:var(--navy); font-weight:700;
+    text-decoration:none; border-radius:22px; padding:9px 22px; font-size:.9rem; transition:transform .2s;}
+  .planlink a:hover{transform:scale(1.05);}
+  .planlink p{font-size:.9rem; opacity:.85;}
+
+  footer{background:var(--navy); color:#fff; text-align:center; padding:34px 22px; margin-top:70px;}
+  footer .stripe{margin:0 auto 16px;}
+  footer p{font-size:.82rem; opacity:.75;}
+  .note{text-align:center; color:var(--muted); font-size:.78rem; margin-top:40px;}
+</style>
+</head>
+<body>
+
+<div class="promo">🚚 Lanzamiento España · Envío gratis a partir de 30 € · Devoluciones 30 días</div>
+
+<div class="topbar">
+  <a class="logo" href="#">BASSTO</a>
+  <div class="links">
+    <a class="nl" href="#coleccion">Colecciones</a>
+    <a class="nl" href="#packs">Packs regalo</a>
+    <a class="nl" href="index.html">Plan de marketing</a>
+  </div>
+  <a class="cart" href="#">🛒 Cesta (0)</a>
+</div>
+
+<header class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <h1>Calcetines con acento colombiano,<br>ahora en España</h1>
+  <p>Algodón peinado · Diseños originales · «Para verse y sentirse mejor»</p>
+  <div class="stripe"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="badges">
+    <span class="badge">🇨🇴 Diseñado en Bogotá</span>
+    <span class="badge">🌱 Algodón responsable</span>
+    <span class="badge">🎁 Perfectos para regalar</span>
+  </div>
+</header>
+
+<main>
+  <div class="filters" id="coleccion">
+    <span class="chip on">Todo</span><span class="chip">Comida</span><span class="chip">Animales</span>
+    <span class="chip">Colores</span><span class="chip">Esenciales</span><span class="chip">Packs</span>
+  </div>
+
+  <div class="grid">
+    <div class="prod"><div class="ph" style="background:linear-gradient(135deg,#FF5A5F,#ff9a9e)"><span class="tag new">Nuevo</span>☕</div>
+      <div class="info"><b>Café de Colombia</b><span>Colección Comida</span>
+      <div class="buy"><span class="price">9,90 €</span><button class="add">Añadir</button></div></div></div>
+    <div class="prod"><div class="ph" style="background:linear-gradient(135deg,#FFB400,#ffe29a)"><span class="tag top">Top ventas</span>🦜</div>
+      <div class="info"><b>Aves del Trópico</b><span>Colección Animales</span>
+      <div class="buy"><span class="price">9,90 €</span><button class="add">Añadir</button></div></div></div>
+    <div class="prod"><div class="ph" style="background:linear-gradient(135deg,#00A6A6,#7fd8d8)">🥭</div>
+      <div class="info"><b>Mango Biche</b><span>Colección Comida</span>
+      <div class="buy"><span class="price">9,90 €</span><button class="add">Añadir</button></div></div></div>
+    <div class="prod"><div class="ph" style="background:linear-gradient(135deg,#7D5BA6,#c5aae0)">🐆</div>
+      <div class="info"><b>Selva Jaguar</b><span>Colección Animales</span>
+      <div class="buy"><span class="price">9,90 €</span><button class="add">Añadir</button></div></div></div>
+    <div class="prod"><div class="ph" style="background:linear-gradient(135deg,#6BBF59,#b8e6a8)"><span class="tag eco">Eco</span>🎨</div>
+      <div class="info"><b>Colores Bogotá</b><span>Colección Colores</span>
+      <div class="buy"><span class="price">9,90 €</span><button class="add">Añadir</button></div></div></div>
+    <div class="prod"><div class="ph" style="background:linear-gradient(135deg,#101D42,#3d508f)">🧦</div>
+      <div class="info"><b>Esenciales Navy</b><span>Colección Esenciales</span>
+      <div class="buy"><span class="price">7,90 €</span><button class="add">Añadir</button></div></div></div>
+    <div class="prod" id="packs"><div class="ph" style="background:linear-gradient(135deg,#FF5A5F,#FFB400)"><span class="tag">Pack</span>📦</div>
+      <div class="info"><b>3-Pack Descubre</b><span>Elige 3 diseños</span>
+      <div class="buy"><span class="price"><s>29,70 €</s>24,90 €</span><button class="add">Añadir</button></div></div></div>
+    <div class="prod"><div class="ph" style="background:linear-gradient(135deg,#00A6A6,#7D5BA6)"><span class="tag new">Regalo</span>🎁</div>
+      <div class="info"><b>6-Pack Caja Regalo</b><span>Caja premium Q4</span>
+      <div class="buy"><span class="price"><s>59,40 €</s>49,90 €</span><button class="add">Añadir</button></div></div></div>
+  </div>
+
+  <div class="valueprops">
+    <div class="vp"><div class="ic">🚚</div><b>Envío 24–48 h</b><span>Península y Baleares</span></div>
+    <div class="vp"><div class="ic">↩️</div><b>Devolución fácil</b><span>30 días sin preguntas</span></div>
+    <div class="vp"><div class="ic">🇨🇴</div><b>Diseño con identidad</b><span>Creatividad latina en cada par</span></div>
+    <div class="vp"><div class="ic">🏢</div><b>Regalo corporativo</b><span>Personalización para empresas</span></div>
+  </div>
+
+  <div class="planlink">
+    <h2 style="font-size:1.2rem;">¿Cómo llega Bassto a España?</h2>
+    <p>Consulta el plan de marketing 2026 completo: mercado, competencia, DAFO, objetivos, presupuesto y ROMI.</p>
+    <a href="index.html">📋 Ver el plan de marketing</a>
+  </div>
+
+  <p class="note">Mockup académico del lanzamiento de Bassto en España — Examen final · Estrategias de Marketing y Comercialización · María Moreno Ventura · julio 2026. Los productos y precios son una propuesta ilustrativa; marca original: bassto.com.</p>
+</main>
+
+<footer>
+  <div class="stripe" style="width:210px; display:flex; height:6px; border-radius:3px; overflow:hidden;"><i style="flex:1;background:var(--coral)"></i><i style="flex:1;background:var(--amarillo)"></i><i style="flex:1;background:var(--teal)"></i><i style="flex:1;background:var(--lila)"></i><i style="flex:1;background:var(--verde)"></i></div>
+  <p>BASSTO España · «Para verse y sentirse mejor» · Mockup del plan de marketing 2026</p>
+</footer>
+
+</body>
+</html>
