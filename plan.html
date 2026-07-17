@@ -64,8 +64,8 @@
     font-size:.78rem; font-weight:600; padding:2px 10px; border-radius:12px;}
 
   /* ---------- DOCK DE MARCA ---------- */
-  .dockbar{background:var(--navy); padding:10px 12px; display:flex; justify-content:center;}
-  nav.pill{display:flex; align-items:center; gap:2px; padding:7px 9px; border-radius:30px; width:fit-content;
+  nav.pill{position:fixed; top:12px; left:50%; transform:translateX(-50%); z-index:60;
+    display:flex; align-items:center; gap:2px; padding:7px 9px; border-radius:30px;
     background:rgba(11,18,48,.72); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px);
     border:1px solid rgba(255,255,255,.18); box-shadow:0 10px 40px rgba(0,0,0,.35);
     white-space:nowrap; max-width:94vw; overflow-x:auto; scrollbar-width:none;}
@@ -81,8 +81,8 @@
   nav#nav{position:sticky; top:0; padding-top:62px; background:rgba(255,255,255,.96); backdrop-filter:blur(8px);
     border-bottom:1px solid var(--line); z-index:40; overflow-x:auto; white-space:nowrap; scrollbar-width:none;}
   nav::-webkit-scrollbar{display:none;}
-  nav a{display:inline-block; padding:14px 13px; color:var(--muted); text-decoration:none;
-    font-size:.85rem; font-weight:600; border-bottom:3px solid transparent; transition:color .2s,border-color .2s;}
+  nav#nav a{display:inline-block; padding:10px 11px; color:var(--muted); text-decoration:none;
+    font-size:.82rem; font-weight:600; border-bottom:3px solid transparent; transition:color .2s,border-color .2s;}
   nav a:hover{color:var(--navy);}
   nav a.active{color:var(--navy); border-bottom-color:var(--teal);}
 
@@ -177,8 +177,6 @@
 
 <div id="progress"></div>
 
-<div id="topbars">
-<div class="dockbar">
 <nav class="pill">
   <a class="logo" href="index.html">BASSTO</a>
   <a class="t" href="index.html">Home</a>
@@ -187,7 +185,6 @@
   <a class="t" href="contacto.html">Contacto</a>
   <a class="t on" href="plan.html">Plan 2026</a>
 </nav>
-</div>
 
 <!-- ============ HERO ============ -->
 <header class="hero">
@@ -215,7 +212,6 @@
   <a href="#contingencia">Contingencia</a>
   <a href="#conclusiones">Conclusiones</a>
 </nav>
-</div>
 
 <main>
 
