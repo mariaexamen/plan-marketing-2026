@@ -63,8 +63,22 @@
   .sock .price{display:inline-block; margin-top:6px; background:var(--navy); color:#fff;
     font-size:.78rem; font-weight:600; padding:2px 10px; border-radius:12px;}
 
+  /* ---------- DOCK DE MARCA ---------- */
+  nav.pill{position:fixed; top:14px; left:50%; transform:translateX(-50%); z-index:60;
+    display:flex; align-items:center; gap:2px; padding:7px 9px; border-radius:30px;
+    background:rgba(11,18,48,.72); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.18); box-shadow:0 10px 40px rgba(0,0,0,.35);
+    white-space:nowrap; max-width:94vw; overflow-x:auto; scrollbar-width:none;}
+  nav.pill::-webkit-scrollbar{display:none;}
+  nav.pill .logo{font-family:'Sora',sans-serif; font-weight:800; letter-spacing:.24em; font-size:.9rem;
+    color:#fff; padding:5px 12px; text-decoration:none;}
+  nav.pill a.t{color:rgba(244,246,255,.7); text-decoration:none; font-size:.82rem; font-weight:600;
+    padding:7px 13px; border-radius:20px; transition:all .25s;}
+  nav.pill a.t:hover{color:#fff; background:rgba(255,255,255,.12);}
+  nav.pill a.t.on{color:var(--navy); background:#fff;}
+
   /* ---------- NAV ---------- */
-  nav{position:sticky; top:0; background:rgba(255,255,255,.92); backdrop-filter:blur(8px);
+  nav#nav{position:sticky; top:66px; background:rgba(255,255,255,.92); backdrop-filter:blur(8px);
     border-bottom:1px solid var(--line); z-index:40; overflow-x:auto; white-space:nowrap; scrollbar-width:none;}
   nav::-webkit-scrollbar{display:none;}
   nav a{display:inline-block; padding:14px 13px; color:var(--muted); text-decoration:none;
@@ -73,7 +87,7 @@
   nav a.active{color:var(--navy); border-bottom-color:var(--teal);}
 
   main{max-width:960px; margin:0 auto; padding:0 24px 90px;}
-  section{margin-top:84px; scroll-margin-top:70px;}
+  section{margin-top:84px; scroll-margin-top:132px;}
 
   /* cabeceras de sección */
   .shead{display:flex; align-items:baseline; gap:16px; margin-bottom:8px;}
@@ -163,6 +177,15 @@
 
 <div id="progress"></div>
 
+<nav class="pill">
+  <a class="logo" href="index.html">BASSTO</a>
+  <a class="t" href="index.html">Home</a>
+  <a class="t" href="productos.html">Productos</a>
+  <a class="t" href="empresa.html">Sobre la empresa</a>
+  <a class="t" href="contacto.html">Contacto</a>
+  <a class="t on" href="plan.html">Plan 2026</a>
+</nav>
+
 <!-- ============ HERO ============ -->
 <header class="hero">
   <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
@@ -177,7 +200,6 @@
 </header>
 
 <nav id="nav">
-  <a href="index.html" style="color:var(--teal); font-weight:700;">🧦 Web Bassto</a>
   <a href="#resumen">Resumen</a>
   <a href="#interno">A. interno</a>
   <a href="#externo">A. externo</a>
