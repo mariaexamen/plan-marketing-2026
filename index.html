@@ -4,506 +4,125 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Bassto — Plan de Marketing 2026 · María Moreno Ventura</title>
+<title>BASSTO España — Calcetines de diseño para hombre</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --navy:#101D42; --navy-2:#1B2B5E; --ink:#1c2333; --muted:#5c6478;
-    --paper:#ffffff; --soft:#f4f6fb; --line:#e3e8f2;
-    --coral:#FF5A5F; --amarillo:#FFB400; --teal:#00A6A6; --lila:#7D5BA6; --verde:#6BBF59;
-    --radius:14px;
-  }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
-  body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); background:var(--paper); line-height:1.65;}
-  h1,h2,h3,.stat b{font-family:'Sora',sans-serif;}
-
-  /* barra de progreso de scroll */
-  #progress{position:fixed; top:0; left:0; height:3px; width:0;
-    background:linear-gradient(90deg,var(--coral),var(--amarillo),var(--teal),var(--lila),var(--verde));
-    z-index:50; transition:width .1s linear;}
-
-  /* ---------- HERO ---------- */
-  .hero{min-height:92vh; background:var(--navy); color:#fff; display:flex; flex-direction:column;
-    justify-content:center; align-items:center; text-align:center; padding:80px 24px 60px; position:relative; overflow:hidden;}
-  .hero .blob{position:absolute; border-radius:50%; filter:blur(70px); opacity:.22; animation:drift 16s ease-in-out infinite alternate;}
-  .b1{width:340px;height:340px;background:var(--coral); top:-80px; left:-60px;}
-  .b2{width:300px;height:300px;background:var(--teal); bottom:-70px; right:-40px; animation-delay:-5s;}
-  .b3{width:220px;height:220px;background:var(--lila); top:30%; right:12%; animation-delay:-9s;}
-  @keyframes drift{from{transform:translate(0,0) scale(1);} to{transform:translate(40px,-30px) scale(1.15);}}
-  .hero h1{font-size:clamp(3rem,9vw,5.5rem); font-weight:800; letter-spacing:.35em; margin-left:.35em;}
-  .stripe{display:flex; height:6px; width:230px; margin:26px auto; border-radius:3px; overflow:hidden;}
-  .stripe i{flex:1;}
-  .stripe i:nth-child(1){background:var(--coral);} .stripe i:nth-child(2){background:var(--amarillo);}
-  .stripe i:nth-child(3){background:var(--teal);} .stripe i:nth-child(4){background:var(--lila);}
-  .stripe i:nth-child(5){background:var(--verde);}
-  .hero .claim{font-size:1.05rem; opacity:.85; font-style:italic;}
-  .hero .sub{font-family:'Sora',sans-serif; font-size:clamp(1.4rem,4vw,2.2rem); font-weight:600; margin-top:34px;}
-  .hero .sub2{font-size:1.1rem; opacity:.85; margin-top:6px;}
-  .hero .meta{margin-top:34px; font-size:.9rem; opacity:.65;}
-  .hero .cue{position:absolute; bottom:22px; left:50%; transform:translateX(-50%); opacity:.6; font-size:1.4rem; animation:bob 1.8s ease-in-out infinite;}
-  @keyframes bob{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,8px);}}
-
-  /* escaparate de calcetines */
-  .shop{display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:36px; perspective:800px;}
-  .sock{width:150px; background:#fff; border-radius:16px; padding:14px 12px 12px; color:var(--ink);
-    box-shadow:0 10px 30px rgba(0,0,0,.28); transition:transform .3s ease; text-align:center;}
-  .sock:nth-child(odd){transform:rotate(-2.5deg);} .sock:nth-child(even){transform:rotate(2deg);}
-  .sock:hover{transform:rotate(0) translateY(-8px) scale(1.05);}
-  .sock .ph{height:92px; border-radius:12px; display:flex; align-items:center; justify-content:center;
-    font-size:3rem; margin-bottom:10px;}
-  .s1 .ph{background:linear-gradient(135deg,var(--coral),#ff9a9e);}
-  .s2 .ph{background:linear-gradient(135deg,var(--amarillo),#ffe29a);}
-  .s3 .ph{background:linear-gradient(135deg,var(--teal),#7fd8d8);}
-  .s4 .ph{background:linear-gradient(135deg,var(--lila),#c5aae0);}
-  .sock b{display:block; font-size:.82rem; font-family:'Sora',sans-serif; color:var(--navy);}
-  .sock span{font-size:.8rem; color:var(--muted);}
-  .sock .price{display:inline-block; margin-top:6px; background:var(--navy); color:#fff;
-    font-size:.78rem; font-weight:600; padding:2px 10px; border-radius:12px;}
-
-  /* ---------- NAV ---------- */
-  nav{position:sticky; top:0; background:rgba(255,255,255,.92); backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line); z-index:40; overflow-x:auto; white-space:nowrap; scrollbar-width:none;}
-  nav::-webkit-scrollbar{display:none;}
-  nav a{display:inline-block; padding:14px 13px; color:var(--muted); text-decoration:none;
-    font-size:.85rem; font-weight:600; border-bottom:3px solid transparent; transition:color .2s,border-color .2s;}
-  nav a:hover{color:var(--navy);}
-  nav a.active{color:var(--navy); border-bottom-color:var(--teal);}
-
-  main{max-width:960px; margin:0 auto; padding:0 24px 90px;}
-  section{margin-top:84px; scroll-margin-top:70px;}
-
-  /* cabeceras de sección */
-  .shead{display:flex; align-items:baseline; gap:16px; margin-bottom:8px;}
-  .shead .n{font-family:'Sora',sans-serif; font-size:3rem; font-weight:800; color:var(--line); line-height:1;}
-  .shead h2{font-size:clamp(1.4rem,3.4vw,1.9rem); color:var(--navy);}
-  .mini-stripe{display:flex; height:5px; width:110px; border-radius:3px; overflow:hidden; margin:6px 0 22px;}
-  .mini-stripe i{flex:1;}
-  .mini-stripe i:nth-child(1){background:var(--coral);} .mini-stripe i:nth-child(2){background:var(--amarillo);}
-  .mini-stripe i:nth-child(3){background:var(--teal);} .mini-stripe i:nth-child(4){background:var(--lila);}
-  .mini-stripe i:nth-child(5){background:var(--verde);}
-
-  p{margin:10px 0;}
-  ul{margin:10px 0 10px 22px;}
-  li{margin:6px 0;}
-  .note{color:var(--muted); font-style:italic; font-size:.9rem;}
-
-  /* reveal on scroll */
-  .rv{opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease;}
-  .rv.on{opacity:1; transform:none;}
-  @media (prefers-reduced-motion: reduce){
-    .rv{opacity:1; transform:none; transition:none;}
-    .hero .blob,.hero .cue{animation:none;}
-    html{scroll-behavior:auto;}
-  }
-
-  /* ---------- STAT TILES ---------- */
-  .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:16px; margin:30px 0 6px;}
-  .stat{background:var(--soft); border-radius:var(--radius); padding:22px 20px; border-top:5px solid var(--teal);}
-  .stat:nth-child(1){border-top-color:var(--coral);} .stat:nth-child(2){border-top-color:var(--amarillo);}
-  .stat:nth-child(3){border-top-color:var(--teal);} .stat:nth-child(4){border-top-color:var(--lila);}
-  .stat b{display:block; font-size:2rem; color:var(--navy); font-weight:800; line-height:1.15;}
-  .stat span{font-size:.85rem; color:var(--muted); font-weight:500;}
-
-  /* tarjetas */
-  .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin:18px 0;}
-  .card{background:var(--paper); border:1px solid var(--line); border-radius:var(--radius);
-    padding:20px; border-top:5px solid var(--navy); transition:transform .25s ease, box-shadow .25s ease;}
-  .card:hover{transform:translateY(-4px); box-shadow:0 12px 28px rgba(16,29,66,.10);}
-  .card h3{font-size:1rem; color:var(--navy); margin-bottom:8px;}
-  .card p{font-size:.92rem; margin:6px 0;}
-  .card .imp{font-size:.88rem; color:var(--muted);}
-  .card .imp b{color:var(--ink);}
-
-  /* DAFO */
-  .dafo{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:18px 0;}
-  @media (max-width:640px){ .dafo{grid-template-columns:1fr;} }
-  .dafo .card{border-top-width:6px;}
-  .dafo .d{border-top-color:var(--coral);} .dafo .f{border-top-color:var(--verde);}
-  .dafo .a{border-top-color:var(--amarillo);} .dafo .o{border-top-color:var(--teal);}
-  .dafo ul{margin-left:18px; font-size:.92rem;}
-
-  /* tablas */
-  .wrap{overflow-x:auto; margin:16px 0; border:1px solid var(--line); border-radius:var(--radius);}
-  table{width:100%; border-collapse:collapse; font-size:.92rem; min-width:640px;}
-  th{background:var(--navy); color:#fff; text-align:left; font-family:'Sora',sans-serif; font-weight:600; font-size:.85rem;}
-  th,td{padding:12px 14px; border-bottom:1px solid var(--line); vertical-align:top;}
-  tbody tr{transition:background .15s;}
-  tbody tr:hover{background:var(--soft);}
-  tr:last-child td{border-bottom:none;}
-  .num{text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums;}
-  .total td{background:var(--soft); font-weight:700;}
-  .chip{display:inline-block; background:var(--soft); border:1px solid var(--line); color:var(--navy);
-    font-size:.75rem; font-weight:600; padding:2px 10px; border-radius:12px;}
-
-  /* barras de presupuesto (una sola tinta: teal) */
-  .bcell{min-width:150px;}
-  .bar{height:14px; background:var(--soft); border-radius:4px; overflow:hidden;}
-  .bar i{display:block; height:100%; width:0; background:var(--teal); border-radius:4px;
-    transition:width 1s cubic-bezier(.2,.7,.3,1);}
-  .on .bar i{width:var(--w);}
-
-  .formula{background:var(--soft); border-left:5px solid var(--teal); border-radius:0 var(--radius) var(--radius) 0;
-    padding:16px 20px; margin:16px 0; font-size:.98rem;}
-  .romi{font-family:'Sora',sans-serif; font-size:2.4rem; font-weight:800; color:var(--navy);}
-
-  details{margin:16px 0; border:1px solid var(--line); border-radius:var(--radius); padding:14px 18px; background:var(--soft);}
-  summary{cursor:pointer; font-weight:600; color:var(--navy);}
-  details p{font-size:.9rem;}
-
-  footer{background:var(--navy); color:#fff; text-align:center; padding:38px 24px; margin-top:80px;}
-  footer .stripe{margin:0 auto 18px;}
-  footer p{font-size:.85rem; opacity:.75;}
-
-</style>
+<link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-<div id="progress"></div>
+<div class="bg"><div class="blob c1"></div><div class="blob c2"></div><div class="blob c3"></div><div class="blob c4"></div></div>
 
-<!-- ============ HERO ============ -->
-<header class="hero">
-  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
-  <h1>BASSTO</h1>
-  <div class="stripe"><i></i><i></i><i></i><i></i><i></i></div>
-  <div class="claim">Calcetines de diseño para hombre · «Para verse y sentirse mejor»</div>
-  <div class="sub">Plan de Marketing 2026</div>
-  <div class="sub2">Entrada en el mercado español</div>
-
-  <div class="shop" aria-label="Colecciones Bassto (mockup tienda España)">
-    <div class="sock s1"><div class="ph">🧦</div><b>Café de Colombia</b><span>Col. Comida</span><br><span class="price">9,90 €</span></div>
-    <div class="sock s2"><div class="ph">🦜</div><b>Animales Salvajes</b><span>Col. Animales</span><br><span class="price">9,90 €</span></div>
-    <div class="sock s3"><div class="ph">🎨</div><b>Colores Trópico</b><span>Col. Colores</span><br><span class="price">9,90 €</span></div>
-    <div class="sock s4"><div class="ph">🎁</div><b>6-Pack Regalo</b><span>Caja regalo Q4</span><br><span class="price">49,90 €</span></div>
-  </div>
-
-  <div class="meta">Estrategias de Marketing y Comercialización · Examen final · María Moreno Ventura · 17 de julio de 2026</div>
-  <div class="cue">▾</div>
-</header>
-
-<nav id="nav">
-  <a href="#resumen">Resumen</a>
-  <a href="#interno">A. interno</a>
-  <a href="#externo">A. externo</a>
-  <a href="#dafo">DAFO</a>
-  <a href="#objetivos">Objetivos</a>
-  <a href="#publico">Público</a>
-  <a href="#brand">Brand review</a>
-  <a href="#presupuesto">Presupuesto</a>
-  <a href="#resultados">Resultados</a>
-  <a href="#contingencia">Contingencia</a>
-  <a href="#conclusiones">Conclusiones</a>
+<nav class="pill">
+  <a class="logo" href="index.html">BASSTO</a>
+  <a class="t on" href="index.html">Home</a>
+  <a class="t" href="productos.html">Productos</a>
+  <a class="t" href="empresa.html">Sobre la empresa</a>
+  <a class="t" href="contacto.html">Contacto</a>
 </nav>
 
 <main>
 
-<!-- ============ 1 ============ -->
-<section id="resumen" class="rv">
-  <div class="shead"><span class="n">01</span><h2>Resumen ejecutivo</h2></div>
-  <div class="mini-stripe"><i></i><i></i><i></i><i></i><i></i></div>
+  <!-- HERO + CATÁLOGO -->
+  <header class="rv">
+    <span class="kicker">🇨🇴 → 🇪🇸 · Lanzamiento España 2026</span>
+    <h1 class="big">Calcetines con<br><span class="grad">acento colombiano</span></h1>
+    <p class="lead">Algodón peinado, diseños originales y color del trópico. «Para verse y sentirse mejor» — ahora con envío en España en 24–48 h.</p>
+    <div class="stripe"><i></i><i></i><i></i><i></i><i></i></div>
+    <a class="btn" href="#catalogo">Ver catálogo</a>
+    <a class="btn ghost" href="productos.html">Conoce las colecciones</a>
+  </header>
 
-  <div class="stats">
-    <div class="stat"><b><span class="count" data-to="500000" data-fmt="eur">0</span></b><span>Ventas objetivo · año 1</span></div>
-    <div class="stat"><b><span class="count" data-to="15" data-fmt="pct">0</span></b><span>Notoriedad sugerida en el público primario</span></div>
-    <div class="stat"><b><span class="count" data-to="120" data-fmt="int">0</span></b><span>Puntos de venta multimarca + 2 marketplaces</span></div>
-    <div class="stat"><b>ROMI 0,45</b><span>Contribución positiva desde el año 1</span></div>
-  </div>
+  <!-- CATÁLOGO COMPLETO -->
+  <section id="catalogo" class="rv">
+    <h2 class="sec">El catálogo <span class="grad">hombre</span></h2>
+    <p class="lead">Talla única 40–46 · 9,90 € el par · packs con descuento.</p>
+    <div class="chips">
+      <span class="chip on">Todo</span><span class="chip">Comida</span><span class="chip">Animales</span>
+      <span class="chip">Colores</span><span class="chip">Esenciales</span><span class="chip">Packs</span>
+    </div>
 
-  <p>Bassto, marca colombiana de calcetines de diseño para hombre, se plantea su entrada en el mercado español en 2026. El mercado español de calcetines de hombre se estima en unos 150 millones de euros, dominado por el producto básico de gran distribución; dentro de él, el segmento de calcetines de moda y diseño —donde compite Bassto— ronda los 35–40 millones de euros y crece a un ritmo aproximado del 8 % anual, impulsado por la compra regalo y la búsqueda de expresión personal en los accesorios.</p>
-  <p>La oportunidad es clara pero exigente: existe un líder local consolidado (Jimmy Lion) y un referente internacional (Happy Socks), por lo que Bassto no competirá en precio ni en cobertura, sino en <b>diferenciación creativa</b>: diseño con identidad latinoamericana, colecciones cápsula y una propuesta fuerte de regalo, con la sostenibilidad como atributo de apoyo.</p>
-  <p>La estrategia de entrada es <i>digital first</i> con apoyo selectivo en el canal físico multimarca: lanzamiento de la tienda online propia y marketplaces, construcción de notoriedad mediante redes sociales, influencers y relaciones públicas, y desarrollo progresivo de una red de 120 puntos de venta multimarca en las principales ciudades.</p>
-  <p>La inversión total de marketing es de <b>190.000 €</b> (38 % sobre ventas, ratio elevado pero propio de un año de lanzamiento), que genera una contribución de marketing positiva de 85.000 € y un <b>ROMI de 0,45</b> en el primer año, con recuperación completa de la inversión a partir del segundo año gracias a la recompra y la base de clientes captada. Un plan de contingencia con triggers cuantificados y una partida reservada del 10 % del presupuesto protege los objetivos frente a las tres desviaciones más probables.</p>
-</section>
-
-<!-- ============ 2 ============ -->
-<section id="interno" class="rv">
-  <div class="shead"><span class="n">02</span><h2>Análisis interno</h2></div>
-  <div class="mini-stripe"><i></i><i></i><i></i><i></i><i></i></div>
-
-  <p><b>La empresa.</b> Bassto (<a href="https://bassto.com" target="_blank" rel="noopener">bassto.com</a>) es una empresa colombiana especializada en el diseño, producción y comercialización de calcetines de algodón peinado con diseños originales, coloridos y orientados a un público joven y urbano, bajo el eslogan <i>«Para verse y sentirse mejor»</i>. Su propuesta combina creatividad, moda y funcionalidad, con producto para uso cotidiano y para regalo, colecciones temáticas (Esenciales, Colores, Animales, Comida, Deportivas) y ediciones especiales, incluyendo 6-packs temáticos en caja.</p>
-  <p><b>Modelo comercial en Colombia.</b> Distribución multicanal: tienda online propia (con venta asistida por WhatsApp), redes sociales y canales digitales, distribuidores y puntos de venta multimarca aliados, ventas corporativas y regalo promocional —con personalización/maquila para clientes como Platzi, Accenture o el Museo Nacional de Colombia— y presencia en ferias y eventos especializados. Este mix indica una organización comercial flexible, con experiencia en venta directa al consumidor (DTC) y un canal B2B corporativo sólido, un activo poco habitual en marcas de su tamaño.</p>
-  <p><b>Posicionamiento y público actual.</b> Marca de diseño accesible: el par se vende a ≈35.000 COP (≈8 €) y el 6-pack a ≈180.000 COP, un precio medio-alto dentro de la categoría en Colombia, muy por debajo del lujo, con el diseño y la identidad como principales palancas de valor. Público joven urbano (aprox. 20–35 años) que usa el calcetín como accesorio de expresión personal.</p>
-  <p><b>Marketing mix en origen (4 Ps).</b> <i>Producto:</i> calcetines de algodón peinado en talla única, colecciones temáticas y cápsulas, packs regalo; identidad visual minimalista (blanco/negro/navy) que hace destacar el color del producto. <i>Precio:</i> prima frente al básico, accesible frente a marcas internacionales; promociones por volumen. <i>Distribución:</i> DTC digital + multimarca aliado + corporativo. <i>Comunicación:</i> nativa digital, apoyada en redes sociales, contenido y colaboraciones.</p>
-  <p><b>Conclusiones críticas.</b> Fortalezas reales: capacidad de diseño diferencial, experiencia DTC y coste de producción competitivo. Debilidades a corregir: notoriedad nula fuera de Colombia, ausencia de red comercial en Europa y una cadena logística transatlántica que penaliza plazos y costes si no se planifica stock en destino. Al no disponer de datos financieros públicos de la compañía, el plan asume una capacidad de producción suficiente para el volumen objetivo del primer año.</p>
-</section>
-
-<!-- ============ 3 ============ -->
-<section id="externo" class="rv">
-  <div class="shead"><span class="n">03</span><h2>Análisis externo</h2></div>
-  <div class="mini-stripe"><i></i><i></i><i></i><i></i><i></i></div>
-
-  <h3 style="color:var(--navy); margin:18px 0 8px;">3.1. El mercado español de calcetines de hombre</h3>
-  <ul>
-    <li><b>Volumen:</b> unos 23 millones de hombres en España con un consumo medio estimado de 6–8 pares/año ⇒ ≈<b>70 millones de pares/año</b> en la categoría hombre (excluido deporte e infantil).</li>
-    <li><b>Valor:</b> con un precio medio ponderado de ≈2,1 €/par (el básico de gran distribución domina el mix), el mercado ronda los <b>150 millones de euros</b>.</li>
-    <li><b>Segmento objetivo (moda/diseño):</b> calcetines de 6–14 €/par vendidos como accesorio de moda o regalo: ≈<b>35–40 M€</b>, con crecimiento estimado del <b>8 % anual</b>, frente al estancamiento del básico.</li>
-    <li><b>Canales:</b> gran distribución y cadenas (Calzedonia, Primark, supermercados) concentran el volumen; en el segmento moda, el e-commerce sube al ≈30 % (tienda propia + Amazon), con el multimarca y los grandes almacenes (El Corte Inglés) como vitrina física clave.</li>
-    <li><b>Estacionalidad:</b> ≈40 % de las ventas del segmento moda se concentran en ocasiones de regalo (Navidad, Reyes, Día del Padre, San Valentín), con pico claro en el cuarto trimestre.</li>
-    <li><b>Tendencias:</b> premiumización del accesorio; packs y cajas regalo; colaboraciones y licencias (cultura pop); sostenibilidad como criterio creciente de elección; social commerce (Instagram/TikTok) como canal de descubrimiento.</li>
-  </ul>
-  <p><b>Conclusión.</b> <i>Oportunidad:</i> nicho de moda-regalo en crecimiento, receptivo a marcas con identidad y sin barreras arancelarias (acuerdo comercial UE–Colombia). <i>Amenaza:</i> mercado de volumen dominado por el low cost, que obliga a Bassto a competir exclusivamente en el segmento de diseño.</p>
-
-  <h3 style="color:var(--navy); margin:30px 0 8px;">3.2. Análisis PESTEL</h3>
-  <div class="cards">
-    <div class="card" style="border-top-color:var(--coral)"><h3>Político</h3>
-      <p>Estabilidad UE; acuerdo comercial UE–Colombia vigente (arancel cero en textil con reglas de origen).</p>
-      <p class="imp"><b>Implicación:</b> importación sin arancel — ventaja de coste frente a producción asiática y a la percepción de «producto de origen».</p></div>
-    <div class="card" style="border-top-color:var(--amarillo)"><h3>Económico</h3>
-      <p>Consumo en recuperación moderada; renta disponible sensible; el gasto en «pequeños caprichos» resiste mejor que el gran ticket.</p>
-      <p class="imp"><b>Implicación:</b> el calcetín de diseño (9–12 €) funciona como <i>affordable treat</i> y regalo de bajo riesgo — categoría resiliente.</p></div>
-    <div class="card" style="border-top-color:var(--teal)"><h3>Social</h3>
-      <p>Casualización de la vestimenta; el calcetín como expresión personal; fuerte cultura de regalo; valoración del origen y la autenticidad.</p>
-      <p class="imp"><b>Implicación:</b> el relato «diseño latino auténtico» diferencia frente a competidores nórdicos/locales; foco en ocasiones de regalo.</p></div>
-    <div class="card" style="border-top-color:var(--lila)"><h3>Tecnológico</h3>
-      <p>E-commerce y social commerce maduros; TikTok/Instagram como motor de descubrimiento; última milla eficiente.</p>
-      <p class="imp"><b>Implicación:</b> entrada <i>digital first</i> viable con inversión moderada; el contenido creativo es la principal arma de captación.</p></div>
-    <div class="card" style="border-top-color:var(--verde)"><h3>Ecológico</h3>
-      <p>Presión regulatoria y de consumo hacia el textil sostenible (ecodiseño UE, responsabilidad ampliada del productor).</p>
-      <p class="imp"><b>Implicación:</b> certificar materiales y comunicar producción responsable — requisito de acceso al segmento, no solo ventaja.</p></div>
-    <div class="card" style="border-top-color:var(--navy)"><h3>Legal</h3>
-      <p>Etiquetado textil UE (composición, talla), normativa de consumo y devoluciones online, RGPD en CRM.</p>
-      <p class="imp"><b>Implicación:</b> adaptar etiquetado y web a normativa española/UE desde el día uno; coste bajo pero imprescindible.</p></div>
-  </div>
-
-  <h3 style="color:var(--navy); margin:30px 0 8px;">3.3. Análisis de la competencia</h3>
-  <p>Se seleccionan tres marcas especializadas en calcetines de moda para hombre presentes en España:</p>
-  <div class="wrap">
-  <table>
-    <thead><tr><th></th><th>Jimmy Lion</th><th>Happy Socks</th><th>Sockaholic</th></tr></thead>
-    <tbody>
-    <tr><td><b>Posicionamiento</b></td><td>Líder local del calcetín de diseño; cercano, pop, fuerte en licencias (Marvel, Harry Potter…).</td><td>Referente internacional premium del calcetín colorido; imagen aspiracional «sueca».</td><td>Marca española de diseño divertido, retadora, precio más accesible.</td></tr>
-    <tr><td><b>Producto (gama)</b></td><td>Muy amplia: diseños propios + licencias, packs y cajas regalo, tallas amplias.</td><td>Amplia, colecciones y colaboraciones con artistas; fuerte en cajas regalo.</td><td>Media: diseños propios divertidos, packs temáticos.</td></tr>
-    <tr><td><b>Precio (índice; Bassto = 100)</b></td><td>≈9–12 €/par · índice ≈105</td><td>≈10–14 €/par · índice ≈125</td><td>≈7–10 €/par · índice ≈85</td></tr>
-    <tr><td><b>Comunicación</b></td><td>Muy activa en Instagram/TikTok, licencias como palanca, campañas estacionales de regalo.</td><td>Campañas globales, colaboraciones celebrity, PR de marca; menor cercanía local.</td><td>Digital, humor, microinfluencers; presupuesto limitado.</td></tr>
-    <tr><td><b>Distribución (% estimado)</b></td><td>Web ≈40 % · Amazon ≈20 % · tiendas propias ≈15 % · multimarca/ECI ≈25 %</td><td>Web ≈30 % · marketplaces ≈25 % · grandes almacenes y travel retail ≈30 % · multimarca ≈15 %</td><td>Web ≈50 % · Amazon ≈30 % · multimarca ≈20 %</td></tr>
-    </tbody>
-  </table>
-  </div>
-  <p><b>Conclusiones.</b> (1) El territorio «diseño + regalo» está ocupado pero en crecimiento: hay espacio para una propuesta con identidad propia diferencial (latina), que ninguno de los tres ofrece. (2) Jimmy Lion demuestra que el modelo web propia + Amazon + multimarca funciona en España: es la referencia de <i>go-to-market</i> a replicar. (3) Happy Socks fija el techo de precio del segmento; Bassto debe situarse entre Sockaholic y Jimmy Lion (≈9,90 €/par) para tener margen sin perder accesibilidad. (4) <i>Amenaza:</i> capacidad de reacción promocional de Jimmy Lion en campaña de Navidad.</p>
-</section>
-
-<!-- ============ 4 ============ -->
-<section id="dafo" class="rv">
-  <div class="shead"><span class="n">04</span><h2>Análisis DAFO</h2></div>
-  <div class="mini-stripe"><i></i><i></i><i></i><i></i><i></i></div>
-
-  <div class="dafo">
-    <div class="card d"><h3>Debilidades</h3><ul>
-      <li>Notoriedad nula en España (secc. 2).</li>
-      <li>Sin red comercial ni logística en Europa (secc. 2).</li>
-      <li>Cadena de suministro transatlántica: plazos y coste (secc. 2).</li>
-      <li>Recursos limitados frente a los líderes del segmento (secc. 3.3).</li></ul></div>
-    <div class="card f"><h3>Fortalezas</h3><ul>
-      <li>Capacidad de diseño diferencial e identidad de marca propia (secc. 2).</li>
-      <li>Experiencia DTC digital y en canal corporativo/regalo (secc. 2).</li>
-      <li>Coste de producción competitivo con arancel cero UE–Colombia (secc. 2 y 3.2).</li>
-      <li>Flexibilidad para colecciones cápsula y ediciones especiales (secc. 2).</li></ul></div>
-    <div class="card a"><h3>Amenazas</h3><ul>
-      <li>Competidores consolidados: Jimmy Lion (líder local) y Happy Socks (secc. 3.3).</li>
-      <li>Dominio del low cost en volumen: Calzedonia, Primark, gran distribución (secc. 3.1).</li>
-      <li>Coste publicitario digital creciente: presión sobre el CAC (secc. 3.2).</li>
-      <li>Reacción promocional del líder en campañas clave (secc. 3.3).</li></ul></div>
-    <div class="card o"><h3>Oportunidades</h3><ul>
-      <li>Segmento moda-regalo creciendo ≈8 % anual (secc. 3.1).</li>
-      <li>40 % de compras por ocasión de regalo: pico Q4 accionable (secc. 3.1).</li>
-      <li>Social commerce como canal de descubrimiento de bajo coste relativo (secc. 3.2).</li>
-      <li>Valoración social de autenticidad, origen y sostenibilidad (secc. 3.2).</li></ul></div>
-  </div>
-  <p><b>CAME (síntesis).</b> <i>Corregir</i> la falta de notoriedad con inversión concentrada en digital y PR de lanzamiento; <i>Afrontar</i> a los líderes evitando la guerra de precios y compitiendo por diferenciación creativa; <i>Mantener</i> la ventaja de coste y la flexibilidad de colecciones cortas; <i>Explotar</i> la ocasión de regalo (packs, Q4) y el relato de identidad latina y sostenibilidad.</p>
-</section>
-
-<!-- ============ 5 ============ -->
-<section id="objetivos" class="rv">
-  <div class="shead"><span class="n">05</span><h2>Objetivos de marketing 2026</h2></div>
-  <div class="mini-stripe"><i></i><i></i><i></i><i></i><i></i></div>
-  <div class="wrap">
-  <table>
-    <thead><tr><th style="width:6%">Nº</th><th>Objetivo (SMART)</th><th>Métrica y valor objetivo</th><th>Justificación (DAFO)</th></tr></thead>
-    <tbody>
-    <tr><td><span class="chip">O1</span></td><td>Alcanzar 500.000 € de ventas netas en España en los 12 meses del plan.</td><td>Ventas netas ≥ 500.000 € (≈50.000 pares a PVP medio 9,90 €).</td><td>Explota el crecimiento del segmento (O) apoyado en coste competitivo (F); ≈1,3 % de cuota del segmento moda: ambicioso y realista.</td></tr>
-    <tr><td><span class="chip">O2</span></td><td>Construir notoriedad de marca en el público objetivo primario.</td><td>Notoriedad sugerida ≥15 % en hombres 20–35 urbanos (estudio ad hoc, dic. 2026).</td><td>Corrige la principal debilidad (D: marca desconocida); condición necesaria para O1 y O3.</td></tr>
-    <tr><td><span class="chip">O3</span></td><td>Desarrollar la distribución física y de marketplaces.</td><td>120 puntos de venta multimarca activos + Amazon y Miravia operativos; distribución ponderada ≥10 % en el canal moda urbano.</td><td>Corrige la ausencia de red comercial (D) replicando el modelo probado del líder (secc. 3.3).</td></tr>
-    <tr><td><span class="chip">O4</span></td><td>Construir una base de clientes digitales rentable.</td><td>30.000 clientes registrados; CAC ≤12 €; tasa de recompra ≥15 % a 6 meses.</td><td>Apalanca la experiencia DTC (F) y protege frente al encarecimiento del CAC (A); base del ROMI futuro.</td></tr>
-    </tbody>
-  </table>
-  </div>
-</section>
-
-<!-- ============ 6 ============ -->
-<section id="publico" class="rv">
-  <div class="shead"><span class="n">06</span><h2>Público objetivo</h2></div>
-  <div class="mini-stripe"><i></i><i></i><i></i><i></i><i></i></div>
-  <p><b>Criterios de segmentación del mercado de calcetines de hombre en España:</b></p>
-  <ul>
-    <li><i>Geográficos:</i> concentración en áreas urbanas &gt;100.000 habitantes (Madrid, Barcelona, Valencia, Sevilla, Bilbao, Málaga), donde se concentran moda y capacidad de gasto.</li>
-    <li><i>Sociodemográficos:</i> hombres 20–40 años, renta media y media-alta; y comprador/a de regalo (mayoritariamente mujeres 25–45) que adquiere la categoría para terceros.</li>
-    <li><i>Psicográficos:</i> orientados a la expresión personal, la moda casual y la cultura pop; valoran autenticidad, diseño y sostenibilidad.</li>
-    <li><i>Comportamentales:</i> compran moda online con naturalidad; ≈40 % de las compras del segmento son regalo; deciden por diseño y marca, no por precio; sensibles a ediciones limitadas.</li>
-  </ul>
-  <p><b>Público objetivo primario:</b> hombres de 20 a 35 años, urbanos, digitales, que usan el accesorio como elemento de identidad. Dimensionamiento (estimación a partir de INE): ≈4,3 M de hombres 20–35; ≈60 % en áreas urbanas objetivo ≈2,6 M; afinidad con moda/diseño ≈40 % ⇒ <b>≈1,0–1,1 millones de personas</b>.</p>
-  <p><b>Público secundario (comprador de regalo):</b> mujeres 25–45 urbanas que compran calcetines de diseño como regalo de bajo riesgo y precio contenido; se activa estacionalmente (Q4, Día del Padre, San Valentín).</p>
-</section>
-
-<!-- ============ 7 ============ -->
-<section id="brand" class="rv">
-  <div class="shead"><span class="n">07</span><h2>Brand review</h2></div>
-  <div class="mini-stripe"><i></i><i></i><i></i><i></i><i></i></div>
-  <div class="wrap">
-  <table>
-    <thead><tr><th style="width:5%">Obj.</th><th>Estrategias</th><th>Acciones</th><th class="num">Ppto. (€)</th><th>KPIs</th></tr></thead>
-    <tbody>
-    <tr><td><span class="chip">O1</span></td><td>Penetración en el segmento moda-regalo con precio 9,90 € y foco en packs y Q4.</td><td>Lanzamiento web ES; campañas performance (Meta, TikTok, Google); packs regalo Q4; promociones en fechas clave; venta corporativa B2B.</td><td class="num">85.000</td><td>Ventas netas mensuales; PVP medio; % ventas en packs; ventas Q4 ≥40 % del año.</td></tr>
-    <tr><td><span class="chip">O2</span></td><td>Notoriedad vía contenido, influencers y PR con el relato «diseño latino».</td><td>Campaña de lanzamiento con PR y prensa moda; 20 colaboraciones con influencers/microinfluencers; contenido continuo IG/TikTok; colección cápsula con artista latino.</td><td class="num">55.000</td><td>Notoriedad sugerida (estudio dic.); alcance y engagement; menciones ganadas; CPM efectivo.</td></tr>
-    <tr><td><span class="chip">O3</span></td><td>Distribución selectiva multimarca + marketplaces, replicando el modelo del líder.</td><td>Agente comercial multimarca; presencia en Momad; materiales punto de venta; alta y ads en Amazon y Miravia; propuesta a El Corte Inglés (córner test).</td><td class="num">30.000</td><td>Puntos de venta activos (120); sell-out por punto; cuota búsquedas Amazon; distribución ponderada.</td></tr>
-    <tr><td><span class="chip">O4</span></td><td>Captación y fidelización digital con CAC controlado.</td><td>SEO y CRO de la web; email/CRM con flujos de bienvenida y recompra; programa de referidos; remarketing; drops exclusivos.</td><td class="num">20.000</td><td>Clientes registrados (30.000); CAC ≤12 €; recompra ≥15 %; LTV/CAC ≥2 a 12 meses.</td></tr>
-    <tr class="total"><td colspan="3">Subtotal acciones (incluye contingencia de 18.000 € — apartado 8)</td><td class="num">190.000</td><td></td></tr>
-    </tbody>
-  </table>
-  </div>
-</section>
-
-<!-- ============ 8 ============ -->
-<section id="presupuesto" class="rv">
-  <div class="shead"><span class="n">08</span><h2>Presupuesto de marketing</h2></div>
-  <div class="mini-stripe"><i></i><i></i><i></i><i></i><i></i></div>
-  <div class="wrap">
-  <table>
-    <thead><tr><th>Acción</th><th>Obj.</th><th class="num">Importe (€)</th><th class="num">% s/total</th><th class="bcell">Peso</th></tr></thead>
-    <tbody>
-    <tr><td>Publicidad digital performance (Meta, TikTok, Google)</td><td><span class="chip">O1/O4</span></td><td class="num">60.000</td><td class="num">31,6 %</td><td class="bcell"><div class="bar" title="60.000 € — 31,6 %"><i style="--w:31.6%"></i></div></td></tr>
-    <tr><td>Influencers y colaboraciones (incl. cápsula artista)</td><td><span class="chip">O2</span></td><td class="num">25.000</td><td class="num">13,2 %</td><td class="bcell"><div class="bar" title="25.000 € — 13,2 %"><i style="--w:13.2%"></i></div></td></tr>
-    <tr><td>Feria Momad, agente comercial y trade marketing</td><td><span class="chip">O3</span></td><td class="num">20.000</td><td class="num">10,5 %</td><td class="bcell"><div class="bar" title="20.000 € — 10,5 %"><i style="--w:10.5%"></i></div></td></tr>
-    <tr><td>PR, prensa y evento de lanzamiento</td><td><span class="chip">O2</span></td><td class="num">15.000</td><td class="num">7,9 %</td><td class="bcell"><div class="bar" title="15.000 € — 7,9 %"><i style="--w:7.9%"></i></div></td></tr>
-    <tr><td>Contenido y producción audiovisual</td><td><span class="chip">O2</span></td><td class="num">15.000</td><td class="num">7,9 %</td><td class="bcell"><div class="bar" title="15.000 € — 7,9 %"><i style="--w:7.9%"></i></div></td></tr>
-    <tr><td>Promociones, sampling y packs regalo</td><td><span class="chip">O1</span></td><td class="num">15.000</td><td class="num">7,9 %</td><td class="bcell"><div class="bar" title="15.000 € — 7,9 %"><i style="--w:7.9%"></i></div></td></tr>
-    <tr><td>SEO, CRO, CRM y programa de referidos</td><td><span class="chip">O4</span></td><td class="num">12.000</td><td class="num">6,3 %</td><td class="bcell"><div class="bar" title="12.000 € — 6,3 %"><i style="--w:6.3%"></i></div></td></tr>
-    <tr><td>Marketplaces: fees de lanzamiento y Amazon/Miravia Ads</td><td><span class="chip">O3</span></td><td class="num">10.000</td><td class="num">5,3 %</td><td class="bcell"><div class="bar" title="10.000 € — 5,3 %"><i style="--w:5.3%"></i></div></td></tr>
-    <tr><td><b>Subtotal acciones</b></td><td></td><td class="num"><b>172.000</b></td><td class="num">90,5 %</td><td class="bcell"></td></tr>
-    <tr><td>Partida de contingencia (≈10 %)</td><td></td><td class="num">18.000</td><td class="num">9,5 %</td><td class="bcell"><div class="bar" title="18.000 € — 9,5 %"><i style="--w:9.5%"></i></div></td></tr>
-    <tr class="total"><td>TOTAL</td><td></td><td class="num">190.000</td><td class="num">100 %</td><td class="bcell"></td></tr>
-    </tbody>
-  </table>
-  </div>
-  <p>El presupuesto representa un <b>38 % sobre las ventas previstas</b> (500.000 €), un ratio elevado pero deliberado en un año de lanzamiento: la inversión en notoriedad y captación se capitaliza en los ejercicios siguientes vía recompra (ver apartado 09).</p>
-</section>
-
-<!-- ============ 9 ============ -->
-<section id="resultados" class="rv">
-  <div class="shead"><span class="n">09</span><h2>Cuenta de resultados</h2></div>
-  <div class="mini-stripe"><i></i><i></i><i></i><i></i><i></i></div>
-  <div class="wrap" style="max-width:680px">
-  <table style="min-width:0">
-    <thead><tr><th>Concepto</th><th class="num">€</th><th class="num">% s/ventas</th></tr></thead>
-    <tbody>
-    <tr><td>Ventas netas previstas 2026</td><td class="num">500.000</td><td class="num">100 %</td></tr>
-    <tr><td>Coste de ventas (producto, transporte, aduana, logística)</td><td class="num">−225.000</td><td class="num">45 %</td></tr>
-    <tr><td><b>Margen bruto</b></td><td class="num"><b>275.000</b></td><td class="num"><b>55 %</b></td></tr>
-    <tr><td>Presupuesto de marketing</td><td class="num">−190.000</td><td class="num">38 %</td></tr>
-    <tr class="total"><td>Margen de contribución de marketing</td><td class="num">85.000</td><td class="num">17 %</td></tr>
-    </tbody>
-  </table>
-  </div>
-  <div class="formula">
-    <span class="romi">ROMI = 0,45</span><br>
-    (Margen bruto − Inversión de marketing) / Inversión de marketing = (275.000 − 190.000) / 190.000
-  </div>
-  <p>Cada euro invertido en marketing devuelve 0,45 € de contribución en el propio año de lanzamiento, con la operación ya en positivo. La rentabilidad plena llega en el segundo año: manteniendo la base de 30.000 clientes con una recompra del 15–20 % y reduciendo el peso del presupuesto al ≈25 % de las ventas, el ROMI proyectado supera 1,0.</p>
-</section>
-
-<!-- ============ 10 ============ -->
-<section id="contingencia" class="rv">
-  <div class="shead"><span class="n">10</span><h2>Plan de contingencia</h2></div>
-  <div class="mini-stripe"><i></i><i></i><i></i><i></i><i></i></div>
-  <div class="cards">
-    <div class="card" style="border-top-color:var(--coral)">
-      <h3>Ventas por debajo de lo previsto</h3>
-      <p><span class="chip">Trigger</span> Ventas acumuladas &lt;75 % del objetivo al cierre de un trimestre.</p>
-      <p>Reforzar promoción en packs; acelerar Amazon Ads (conversión rápida); revisar surtido y precios de entrada; ampliar venta corporativa B2B.</p>
-      <p class="imp"><b>Financiación:</b> hasta 10.000 € de contingencia.</p></div>
-    <div class="card" style="border-top-color:var(--amarillo)">
-      <h3>Reacción promocional del líder en Q4</h3>
-      <p><span class="chip">Trigger</span> Diferencial de precio percibido &gt;20 % en campaña; caída de conversión web &gt;25 %.</p>
-      <p>No entrar en guerra de precios: edición limitada/colaboración exclusiva; concentrar influencers en Q4; valor añadido (packaging regalo gratis) en lugar de descuento.</p>
-      <p class="imp"><b>Financiación:</b> hasta 8.000 € + reasignación de contenido.</p></div>
-    <div class="card" style="border-top-color:var(--teal)">
-      <h3>Encarecimiento del CAC digital</h3>
-      <p><span class="chip">Trigger</span> CAC medio mensual &gt;15 € durante 2 meses consecutivos.</p>
-      <p>Redistribuir 30 % del paid a microinfluencers, afiliación y CRM/email; optimizar creatividades y audiencias; priorizar remarketing y referidos.</p>
-      <p class="imp"><b>Financiación:</b> reasignación interna del presupuesto performance.</p></div>
-  </div>
-  <p>La partida de contingencia (18.000 €, 9,5 % del presupuesto) solo se activa contra estos triggers, con revisión mensual del cuadro de mando de KPIs definido en el brand review.</p>
-
+    <div class="grid">
+      <div class="prod"><div class="ph" style="background:linear-gradient(135deg,#FF5A5F55,#FF5A5F22)"><span class="tag">Nuevo</span>☕</div>
+        <div class="info"><b>Café de Colombia</b><span>Colección Comida</span>
+        <div class="buy"><span class="price">9,90 €</span><button class="add">Añadir</button></div></div></div>
+      <div class="prod"><div class="ph" style="background:linear-gradient(135deg,#FFB40055,#FFB40022)"><span class="tag">Top ventas</span>🦜</div>
+        <div class="info"><b>Aves del Trópico</b><span>Colección Animales</span>
+        <div class="buy"><span class="price">9,90 €</span><button class="add">Añadir</button></div></div></div>
+      <div class="prod"><div class="ph" style="background:linear-gradient(135deg,#00A6A655,#00A6A622)">🥭</div>
+        <div class="info"><b>Mango Biche</b><span>Colección Comida</span>
+        <div class="buy"><span class="price">9,90 €</span><button class="add">Añadir</button></div></div></div>
+      <div class="prod"><div class="ph" style="background:linear-gradient(135deg,#7D5BA655,#7D5BA622)">🐆</div>
+        <div class="info"><b>Selva Jaguar</b><span>Colección Animales</span>
+        <div class="buy"><span class="price">9,90 €</span><button class="add">Añadir</button></div></div></div>
+      <div class="prod"><div class="ph" style="background:linear-gradient(135deg,#6BBF5955,#6BBF5922)">🐸</div>
+        <div class="info"><b>Rana de Cristal</b><span>Colección Animales</span>
+        <div class="buy"><span class="price">9,90 €</span><button class="add">Añadir</button></div></div></div>
+      <div class="prod"><div class="ph" style="background:linear-gradient(135deg,#FF5A5F55,#FFB40022)">🫓</div>
+        <div class="info"><b>Arepa Lover</b><span>Colección Comida</span>
+        <div class="buy"><span class="price">9,90 €</span><button class="add">Añadir</button></div></div></div>
+      <div class="prod"><div class="ph" style="background:linear-gradient(135deg,#00A6A655,#7D5BA622)">🎨</div>
+        <div class="info"><b>Colores Trópico</b><span>Colección Colores</span>
+        <div class="buy"><span class="price">9,90 €</span><button class="add">Añadir</button></div></div></div>
+      <div class="prod"><div class="ph" style="background:linear-gradient(135deg,#FFB40055,#6BBF5922)"><span class="tag">Eco</span>🌈</div>
+        <div class="info"><b>Colores Bogotá</b><span>Colección Colores</span>
+        <div class="buy"><span class="price">9,90 €</span><button class="add">Añadir</button></div></div></div>
+      <div class="prod"><div class="ph" style="background:linear-gradient(135deg,#ffffff33,#ffffff11)">🧦</div>
+        <div class="info"><b>Esenciales Navy</b><span>Colección Esenciales</span>
+        <div class="buy"><span class="price">7,90 €</span><button class="add">Añadir</button></div></div></div>
+      <div class="prod"><div class="ph" style="background:linear-gradient(135deg,#ffffff22,#00000022)">🖤</div>
+        <div class="info"><b>Esenciales Negro</b><span>Colección Esenciales</span>
+        <div class="buy"><span class="price">7,90 €</span><button class="add">Añadir</button></div></div></div>
+      <div class="prod"><div class="ph" style="background:linear-gradient(135deg,#FF5A5F55,#00A6A622)"><span class="tag">Pack</span>📦</div>
+        <div class="info"><b>3-Pack Descubre</b><span>Elige 3 diseños</span>
+        <div class="buy"><span class="price"><s>29,70 €</s>24,90 €</span><button class="add">Añadir</button></div></div></div>
+      <div class="prod"><div class="ph" style="background:linear-gradient(135deg,#7D5BA655,#FFB40022)"><span class="tag">Regalo</span>🎁</div>
+        <div class="info"><b>6-Pack Caja Regalo</b><span>Caja premium Q4</span>
+        <div class="buy"><span class="price"><s>59,40 €</s>49,90 €</span><button class="add">Añadir</button></div></div></div>
+    </div>
   </section>
 
-<section id="conclusiones" class="rv">
-  <div class="shead"><span class="n">11</span><h2>Conclusiones</h2></div>
-  <div class="mini-stripe"><i></i><i></i><i></i><i></i><i></i></div>
-  <p>Si tuviera que resumir este plan en una frase, sería esta: España no necesita otro calcetín, pero sí necesita <i>este</i> calcetín. El análisis del mercado deja una foto clara: un mercado grande (en torno a 150 millones de euros) donde el volumen se lo lleva el básico de gran distribución, pero con un rincón —el del diseño y el regalo, de 35–40 millones— que crece cada año cerca de un 8 % y que premia justo lo que Bassto sabe hacer: contar historias con color.</p>
-  <p>La competencia nos ha enseñado dos cosas. La primera, que el modelo funciona: Jimmy Lion ha demostrado que en España se puede construir una marca de calcetines de diseño con web propia, Amazon y multimarca; no hay que inventar el camino, hay que recorrerlo mejor. La segunda, que no tiene sentido pelear ni en precio (ahí ya está Sockaholic) ni en notoriedad pura (ahí ya está Happy Socks): nuestro hueco es la identidad. Nadie está contando lo latino en este mercado, y esa historia es nuestra.</p>
-  <p>El DAFO no engaña: partimos de cero en notoriedad, y ese es el verdadero examen del primer año. Por eso el plan concentra la inversión donde más duele —190.000 euros, con más de la mitad dedicada a construir marca y captar clientes— y asume con naturalidad un ROMI de 0,45 en el año de lanzamiento. No es un mal dato: es el precio de la entrada. La contribución ya es positiva (85.000 euros) y la rentabilidad de verdad llega en el segundo año, cuando los 30.000 clientes captados empiecen a repetir compra.</p>
-  <p>¿Y si algo sale torcido? Para eso está el plan de contingencia: tres riesgos concretos, tres señales de alarma medibles y un colchón del 10 % del presupuesto que solo se toca si suenan. En resumen: un plan ambicioso pero con los pies en el suelo, que no le pide al mercado nada que el mercado no haya demostrado ya que puede dar. Bassto no viene a España a vender calcetines; viene a conseguir que te apetezca enseñarlos.</p>
+  <!-- VALUE PROPS -->
+  <section class="rv">
+    <div class="feats">
+      <div class="feat glass"><div class="ic">🚚</div><b>Envío 24–48 h</b><span>Península y Baleares · gratis desde 30 €</span></div>
+      <div class="feat glass"><div class="ic">↩️</div><b>Devolución fácil</b><span>30 días, sin preguntas</span></div>
+      <div class="feat glass"><div class="ic">🌱</div><b>Algodón responsable</b><span>Peinado, suave y duradero</span></div>
+      <div class="feat glass"><div class="ic">🏢</div><b>Regalo corporativo</b><span>Personalización para empresas</span></div>
+    </div>
+  </section>
 
-  <details>
-    <summary>Fuentes de información</summary>
-    <p>Web oficial de Bassto (bassto.com: surtido, precios, colecciones, canal corporativo); INE (demografía y renta); Modaes y Acotex (mercado español de moda); Statista y Euromonitor (categoría calcetería, órdenes de magnitud); webs y perfiles públicos de Jimmy Lion, Happy Socks y Sockaholic; Comisión Europea (acuerdo comercial UE–Colombia); enunciado del caso. Las cifras señaladas como estimación se han elaborado con apoyo de herramientas de IA a partir de estas fuentes, con revisión y validación humana posterior, y deben interpretarse como órdenes de magnitud.</p>
-  </details>
-  <details>
-    <summary>Anexo: enunciado del caso</summary>
-    <p><b>Máster en Dirección de Marketing Internacional 2026/2027 · Estrategias de Marketing y Comercialización · Examen final – Parte práctica.</b> Elaboración de un plan de marketing: Bassto – calcetines/medias para hombre. Bassto es una empresa colombiana especializada en el diseño, producción y comercialización de calcetines con diseños originales, coloridos y orientados a un público joven y urbano. La empresa se plantea su entrada en el mercado español de calcetines/medias para hombre. El plan debe contener: resumen ejecutivo, análisis interno, análisis externo (mercado y 2-3 competidores con tabla comparativa), DAFO, objetivos 2026, público objetivo (segmentación, no buyer persona), brand review (objetivos-estrategias-acciones-KPIs), presupuesto por acción y total, cuenta de resultados con ROMI, y plan de contingencia. El análisis se centra exclusivamente en el mercado de calcetines para hombre.</p>
-  </details>
-</section>
+  <!-- CTA EMPRESA -->
+  <section class="rv">
+    <div class="glass panel split">
+      <div>
+        <span class="kicker">Sobre nosotros</span>
+        <h2 class="sec">Nacidos en Bogotá,<br>pensados para el mundo</h2>
+        <p class="lead">Detrás de cada par hay diseño con identidad latina, producción responsable y una obsesión: que el calcetín deje de ser lo último que te pones.</p>
+        <br><a class="btn" href="empresa.html">Conócenos</a>
+      </div>
+      <div class="stats">
+        <div class="stat glass"><b>2018</b><span>Nace en Bogotá</span></div>
+        <div class="stat glass"><b>+200</b><span>Diseños creados</span></div>
+        <div class="stat glass"><b>2026</b><span>Llegamos a España</span></div>
+      </div>
+    </div>
+  </section>
 
 </main>
 
 <footer>
-  <div class="stripe"><i></i><i></i><i></i><i></i><i></i></div>
-  <p>BASSTO · Plan de Marketing 2026 · María Moreno Ventura<br>Estrategias de Marketing y Comercialización — Máster en Dirección de Marketing Internacional</p>
+  <div class="fstripe"><i></i><i></i><i></i><i></i><i></i></div>
+  <p>BASSTO España · «Para verse y sentirse mejor»<br>
+  Mockup académico — <a href="plan.html">Plan de Marketing 2026</a> · María Moreno Ventura · Marca original: bassto.com</p>
 </footer>
 
 <script>
-  // Barra de progreso
-  const prog = document.getElementById('progress');
-  addEventListener('scroll', () => {
-    const h = document.documentElement;
-    prog.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
-  }, {passive:true});
-
-  // Reveal on scroll
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }
-  }), {threshold:.12});
+  }), {threshold:.1});
   document.querySelectorAll('.rv').forEach(el => io.observe(el));
-
-  // Nav activo
-  const links = [...document.querySelectorAll('nav a')];
-  const secs = links.map(a => document.querySelector(a.hash));
-  const nio = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting){
-      links.forEach(a => a.classList.toggle('active', a.hash === '#' + e.target.id));
-    }
-  }), {rootMargin:'-40% 0px -55% 0px'});
-  secs.forEach(s => s && nio.observe(s));
-
-  // Contadores
-  const fmt = (v, f) => f === 'eur' ? v.toLocaleString('es-ES') + ' €'
-            : f === 'pct' ? v + ' %' : v.toLocaleString('es-ES');
-  const cio = new IntersectionObserver(es => es.forEach(e => {
-    if (!e.isIntersecting) return;
-    const el = e.target, to = +el.dataset.to, f = el.dataset.fmt, t0 = performance.now();
-    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduce){ el.textContent = fmt(to, f); cio.unobserve(el); return; }
-    const step = t => {
-      const p = Math.min((t - t0) / 1200, 1), ease = 1 - Math.pow(1 - p, 3);
-      el.textContent = fmt(Math.round(to * ease), f);
-      if (p < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-    cio.unobserve(el);
-  }), {threshold:.6});
-  document.querySelectorAll('.count').forEach(el => cio.observe(el));
 </script>
-
 </body>
 </html>
